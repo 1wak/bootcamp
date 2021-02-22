@@ -45,9 +45,6 @@ Materi yang diajarkan
 #### Sesi 1
 - 
 
-#### Sesi 2
-- 
-
 Record Materi
 - [Materi/Slide]() 
 - [sesi 1]()
