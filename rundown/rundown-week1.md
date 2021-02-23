@@ -5,10 +5,9 @@
 Materi yang diajarkan
 #### Sesi 1
 - 09:00 - 10.30 = GIT Concept
-- 10.30 - 11.30 = Using GIT
-#### Sesi 2
-- 13:00 - 14:30 = Code Productivity
-- 14.30 - 15.00 = Agile and scrum
+- 10.30 - 11.00 = Using GIT
+- 11:00 - 11:30 = Code Productivity
+- 11.30 - 12.00 = Agile and scrum
 - Task Day 1
 
 Record Materi
