@@ -15,3 +15,5 @@
 10. link repo dibuat private 
 11. jadikan aku kolaborator supaya bisa lihat repo nya 
 muh.burhanudinn@gmail.com 
+
+https://github.com/mburhanudin/xapiens-batch2
