@@ -1,29 +1,25 @@
-const storage = {
-  beli(stok) {
-    this.qty -= stok;
-    console.log(`Item ${this.title}, telah beli`);
+const user = {
+  login() {
+    console.log(this.email, " telah login");
   },
-  refill(stok) {
-    this.qty += stok;
-    console.log(`Item ${this.title}, telah refill`);
+  logout() {
+    console.log(this.email, " telah logout");
   },
-  retur(stok) {
-    this.qty -= stok;
-    console.log(`Barang ${this.title}, di retur...`);
+  register() {
+    console.log(this.email, " telah mendaftar");
+  },
+  changeEmail() {
+    console.log(this.email, " email telah di ganti");
   },
 };
 
-function Barang(title, qty) {
-  let barang = {};
-  barang.title = title;
-  barang.qty = qty;
-  barang.refill = storage.refill;
-  barang.beli = storage.beli;
-  barang.retur = storage.retur;
-
-  return barang;
+function User(email, password) {
+  this.email = email;
+  this.password = password;
+  this.login = user.login;
+  this.logout = user.logout;
+  this.register = user.register;
+  this.changeEmail = user.changeEmail;
 }
 
-let shampoo = Barang("shampoo", 10000);
-let rokok = Barang("rokok", 30000);
-let tissue = Barang("tissue", 3000);
+let userBaru = new User("test@test.com", "123123");

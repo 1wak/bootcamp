@@ -1,7 +1,5 @@
 const userSatu = {
   email: "satu@user.com",
-  nama_depan: "User",
-  nama_belakang: "Satu",
   password: "inipassword",
   login() {
     console.log(this.email, " telah login");
@@ -9,18 +7,16 @@ const userSatu = {
   logout() {
     console.log(this.email, " telah logout");
   },
-  fullName() {
-    console.log(this.nama_depan + " " + this.nama_belakang);
+  register() {
+    console.log(this.email, " telah mendaftar");
   },
-  hashPassword() {
-    console.log("u983241983kewalda983u48");
+  changeEmail() {
+    console.log(this.email, " email telah di ganti");
   },
 };
 
 const userDua = {
   email: "dua@user.com",
-  nama_depan: "User",
-  nama_belakang: "Dua",
   password: "inipassword",
   login() {
     console.log(this.email, " telah login");
@@ -28,18 +24,16 @@ const userDua = {
   logout() {
     console.log(this.email, " telah logout");
   },
-  fullName() {
-    console.log(this.nama_depan + " " + this.nama_belakang);
+  register() {
+    console.log(this.email, " telah mendaftar");
   },
-  hashPassword() {
-    console.log("u983241983kewalda983u48");
+  changeEmail() {
+    console.log(this.email, " email telah di ganti");
   },
 };
 
 const userTiga = {
   email: "tiga@user.com",
-  nama_depan: "User",
-  nama_belakang: "Tiga",
   password: "inipassword",
   login() {
     console.log(this.email, " telah login");
@@ -47,18 +41,16 @@ const userTiga = {
   logout() {
     console.log(this.email, " telah logout");
   },
-  fullName() {
-    console.log(this.nama_depan + " " + this.nama_belakang);
+  register() {
+    console.log(this.email, " telah mendaftar");
   },
-  hashPassword() {
-    console.log("u983241983kewalda983u48");
+  changeEmail() {
+    console.log(this.email, " email telah di ganti");
   },
 };
 
 const userEmpat = {
   email: "Empat@user.com",
-  nama_depan: "User",
-  nama_belakang: "Empat",
   password: "inipassword",
   login() {
     console.log(this.email, " telah login");
@@ -66,18 +58,16 @@ const userEmpat = {
   logout() {
     console.log(this.email, " telah logout");
   },
-  fullName() {
-    console.log(this.nama_depan + " " + this.nama_belakang);
+  register() {
+    console.log(this.email, " telah mendaftar");
   },
-  hashPassword() {
-    console.log("u983241983kewalda983u48");
+  changeEmail() {
+    console.log(this.email, " email telah di ganti");
   },
 };
 
 const userLima = {
   email: "Lima@user.com",
-  nama_depan: "User",
-  nama_belakang: "Lima",
   password: "inipassword",
   login() {
     console.log(this.email, " telah login");
@@ -85,18 +75,16 @@ const userLima = {
   logout() {
     console.log(this.email, " telah logout");
   },
-  fullName() {
-    console.log(this.nama_depan + " " + this.nama_belakang);
+  register() {
+    console.log(this.email, " telah mendaftar");
   },
-  hashPassword() {
-    console.log("u983241983kewalda983u48");
+  changeEmail() {
+    console.log(this.email, " email telah di ganti");
   },
 };
 
 const userEnam = {
   email: "Enam@user.com",
-  nama_depan: "User",
-  nama_belakang: "Enam",
   password: "inipassword",
   login() {
     console.log(this.email, " telah login");
@@ -104,10 +92,10 @@ const userEnam = {
   logout() {
     console.log(this.email, " telah logout");
   },
-  fullName() {
-    console.log(this.nama_depan + " " + this.nama_belakang);
+  register() {
+    console.log(this.email, " telah mendaftar");
   },
-  hashPassword() {
-    console.log("u983241983kewalda983u48");
+  changeEmail() {
+    console.log(this.email, " email telah di ganti");
   },
 };
