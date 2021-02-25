@@ -1,89 +1,113 @@
-const storage1 = {
-  beli(stok) {
-    this.qty -= stok;
-    console.log(`Item ${this.title}, telah beli`);
+const userSatu = {
+  email: "satu@user.com",
+  nama_depan: "User",
+  nama_belakang: "Satu",
+  password: "inipassword",
+  login() {
+    console.log(this.email, " telah login");
   },
-  refill(stok) {
-    this.qty += stok;
-    console.log(`Item ${this.title}, telah refill`);
+  logout() {
+    console.log(this.email, " telah logout");
   },
-  retur(stok) {
-    this.qty -= stok;
-    console.log(`Barang ${this.title}, di retur...`);
+  fullName() {
+    console.log(this.nama_depan + " " + this.nama_belakang);
   },
-};
-
-const storage2 = {
-  beli(stok) {
-    this.qty -= stok;
-    console.log(`Item ${this.title}, telah beli`);
-  },
-  refill(stok) {
-    this.qty += stok;
-    console.log(`Item ${this.title}, telah refill`);
-  },
-  retur(stok) {
-    this.qty -= stok;
-    console.log(`Barang ${this.title}, di retur...`);
+  hashPassword() {
+    console.log("u983241983kewalda983u48");
   },
 };
 
-const storage3 = {
-  beli(stok) {
-    this.qty -= stok;
-    console.log(`Item ${this.title}, telah beli`);
+const userDua = {
+  email: "dua@user.com",
+  nama_depan: "User",
+  nama_belakang: "Dua",
+  password: "inipassword",
+  login() {
+    console.log(this.email, " telah login");
   },
-  refill(stok) {
-    this.qty += stok;
-    console.log(`Item ${this.title}, telah refill`);
+  logout() {
+    console.log(this.email, " telah logout");
   },
-  retur(stok) {
-    this.qty -= stok;
-    console.log(`Barang ${this.title}, di retur...`);
+  fullName() {
+    console.log(this.nama_depan + " " + this.nama_belakang);
   },
-};
-
-const storage4 = {
-  beli(stok) {
-    this.qty -= stok;
-    console.log(`Item ${this.title}, telah beli`);
-  },
-  refill(stok) {
-    this.qty += stok;
-    console.log(`Item ${this.title}, telah refill`);
-  },
-  retur(stok) {
-    this.qty -= stok;
-    console.log(`Barang ${this.title}, di retur...`);
+  hashPassword() {
+    console.log("u983241983kewalda983u48");
   },
 };
 
-const storage5 = {
-  beli(stok) {
-    this.qty -= stok;
-    console.log(`Item ${this.title}, telah beli`);
+const userTiga = {
+  email: "tiga@user.com",
+  nama_depan: "User",
+  nama_belakang: "Tiga",
+  password: "inipassword",
+  login() {
+    console.log(this.email, " telah login");
   },
-  refill(stok) {
-    this.qty += stok;
-    console.log(`Item ${this.title}, telah refill`);
+  logout() {
+    console.log(this.email, " telah logout");
   },
-  retur(stok) {
-    this.qty -= stok;
-    console.log(`Barang ${this.title}, di retur...`);
+  fullName() {
+    console.log(this.nama_depan + " " + this.nama_belakang);
+  },
+  hashPassword() {
+    console.log("u983241983kewalda983u48");
   },
 };
 
-const storage6 = {
-  beli(stok) {
-    this.qty -= stok;
-    console.log(`Item ${this.title}, telah beli`);
+const userEmpat = {
+  email: "Empat@user.com",
+  nama_depan: "User",
+  nama_belakang: "Empat",
+  password: "inipassword",
+  login() {
+    console.log(this.email, " telah login");
   },
-  refill(stok) {
-    this.qty += stok;
-    console.log(`Item ${this.title}, telah refill`);
+  logout() {
+    console.log(this.email, " telah logout");
   },
-  retur(stok) {
-    this.qty -= stok;
-    console.log(`Barang ${this.title}, di retur...`);
+  fullName() {
+    console.log(this.nama_depan + " " + this.nama_belakang);
+  },
+  hashPassword() {
+    console.log("u983241983kewalda983u48");
+  },
+};
+
+const userLima = {
+  email: "Lima@user.com",
+  nama_depan: "User",
+  nama_belakang: "Lima",
+  password: "inipassword",
+  login() {
+    console.log(this.email, " telah login");
+  },
+  logout() {
+    console.log(this.email, " telah logout");
+  },
+  fullName() {
+    console.log(this.nama_depan + " " + this.nama_belakang);
+  },
+  hashPassword() {
+    console.log("u983241983kewalda983u48");
+  },
+};
+
+const userEnam = {
+  email: "Enam@user.com",
+  nama_depan: "User",
+  nama_belakang: "Enam",
+  password: "inipassword",
+  login() {
+    console.log(this.email, " telah login");
+  },
+  logout() {
+    console.log(this.email, " telah logout");
+  },
+  fullName() {
+    console.log(this.nama_depan + " " + this.nama_belakang);
+  },
+  hashPassword() {
+    console.log("u983241983kewalda983u48");
   },
 };
