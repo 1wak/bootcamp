@@ -1,0 +1,16 @@
+{
+  "name": "day-004",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "1": "node jawaban1.js",
+    "2": "node jawaban2.js",
+    "3": "node jawaban3.js",
+    "4": "node jawaban4.js",
+    "5": "node jawaban5.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
