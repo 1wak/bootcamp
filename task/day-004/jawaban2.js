@@ -1,30 +1,35 @@
-function randomInt(min, max) {
+const randomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
-}
+};
 
-function saveToCloud() {
-  const delay = randomInt(500, 3000);
+let a = randomInt(500, 3000);
+let b = randomInt(500, 3000);
+let c = randomInt(500, 3000);
 
+const saveToCloud = (callback) => {
   setTimeout(() => {
-    console.log(`Save to cloud success in ${delay}ms`);
-  }, delay);
-}
+    callback(`Save to cloud success in ${a}ms`);
+  }, a);
+};
 
-function sendNotification(callback) {
-  const delay = randomInt(500, 3000);
-
+const sendNotification = (callback) => {
   setTimeout(() => {
-    console.log(`Hi you got a new notification ${delay}ms ago`);
-    callback();
-  }, delay);
-}
-function fetchNews() {
-  const delay = randomInt(500, 3000);
+    callback(`Send notif dengan delay ${b} ms`);
+  }, b);
+};
 
+const fetchNews = (callback) => {
   setTimeout(() => {
-    console.log(`Hot news, trending ${delay}ms ago`);
-  }, delay);
-}
+    callback(`Hot news, posted ${c}ms ago`);
+  }, c);
+};
 
-saveToCloud();
-sendNotification(fetchNews);
+saveToCloud((s) => {
+  console.log(s);
+  sendNotification((s2) => {
+    console.log(s2);
+    fetchNews((s3) => {
+      console.log(s3);
+    });
+  });
+});

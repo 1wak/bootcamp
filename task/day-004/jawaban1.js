@@ -1,74 +1,38 @@
-function randomInt(min, max) {
+const randomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
-}
+};
 
-//SaveToCloud
+let a = randomInt(500, 3000);
+let b = randomInt(500, 3000);
+let c = randomInt(500, 3000);
+
 const saveToCloud = () => {
   return new Promise((resolve, reject) => {
-    const delay = randomInt(500, 3000);
-
     setTimeout(() => {
-      resolve(`Save to cloud success in ${delay}ms`);
-      reject(new Error("err"));
-    }, delay);
+      resolve(`Save to cloud success in ${a}ms`);
+      reject(new Error("Bad connection..."));
+    }, a);
   });
 };
-//SendNotification
+
 const sendNotification = () => {
   return new Promise((resolve, reject) => {
-    const delay = randomInt(600, 3000);
-
     setTimeout(() => {
-      resolve(`Hi you got a new notification ${delay}ms ago`);
-      reject(new Error("err"));
-    }, delay);
+      resolve(`You've got one new notification ${b}ms ago`);
+      reject(new Error("Bad connection..."));
+    }, b);
   });
 };
 
 const fetchNews = () => {
   return new Promise((resolve, reject) => {
-    const delay = randomInt(700, 3000);
-
     setTimeout(() => {
-      resolve(`Hot news, trending ${delay}ms ago`);
-      reject(new Error("err"));
-    }, delay);
+      resolve(`Hot news, posted ${c}ms ago`);
+      reject(new Error("Bad connection..."));
+    }, c);
   });
 };
 
-// ------------------------------------------
-// Get promise result
-// ------------------------------------------
-
 Promise.all([saveToCloud(), sendNotification(), fetchNews()]).then((values) => {
-  console.log(values);
+  console.log(values.join(" "));
 });
-saveToCloud()
-  .then((message) => {
-    console.log(message);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-saveToCloud();
-
-sendNotification()
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-sendNotification();
-
-fetchNews()
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-fetchNews();

@@ -1,12 +1,34 @@
-let myFirstPromise = new Promise((resolve, reject) => {
-  for (let i = 1; i <= 3; i++) {
-    setTimeout(() => {
-      resolve(console.log(i));
-    }, 1000);
-  }
-});
+const { default: PQueue } = require("p-queue");
+const queue = new PQueue({ concurrency: 1 });
 
-myFirstPromise.then((nums) => {
-  console.log(nums);
-  console.log("Done");
-});
+const myPromises = [
+  () =>
+    new Promise((resolve) => {
+      for (let i = 1; i <= 3; i++) {
+        setTimeout(() => {
+          resolve(i), console.log(i);
+        }, 1000);
+      }
+    }),
+  () =>
+    new Promise((resolve) => {
+      resolve("Done"), console.log("Done");
+    }),
+];
+
+queue.addAll(myPromises).then(console.log);
+
+// const promise = new Promise((resolve) => {
+//   for (let i = 1; i <= 3; i++) {
+//     setTimeout(() => {
+//       resolve(i), console.log(i);
+//     }, 1000);
+//   }
+// });
+
+// promise
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .then(() => console.log("Done"))
+//   .catch((err) => console.log(err));
