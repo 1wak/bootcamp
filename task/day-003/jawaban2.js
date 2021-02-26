@@ -1,25 +1,30 @@
-const user = {
-  login() {
-    console.log(this.email, " telah login");
-  },
-  logout() {
-    console.log(this.email, " telah logout");
-  },
-  register() {
-    console.log(this.email, " telah mendaftar");
-  },
-  changeEmail() {
-    console.log(this.email, " email telah di ganti");
-  },
-};
+function Murid(nama, nim) {
+  let m = {};
+  m.nama = nama;
+  m.nim = nim;
+  m.isHadir = false;
+  m.nilai = 0;
+  m.poin = 0;
+  m.absensi = function () {
+    this.isHadir = true;
+    console.log(`${this.nama} hadir bu`);
+  };
 
-function User(email, password) {
-  this.email = email;
-  this.password = password;
-  this.login = user.login;
-  this.logout = user.logout;
-  this.register = user.register;
-  this.changeEmail = user.changeEmail;
+  m.nilaiUjian = function () {
+    this.nilai += Math.floor(Math.random() * 10);
+    console.log(`Nilai ${this.nama} ${this.nilai}`);
+  };
+
+  m.bolos = function () {
+    this.isHadir = false;
+    console.log(`${this.nama} tidak hadir`);
+  };
+
+  m.prestasi = function () {
+    this.poin += 100;
+    console.log(`${this.nama} mendapatkan ${this.poin} karena berprestasi`);
+  };
+  return m;
 }
 
-let userBaru = new User("test@test.com", "123123");
+let Lala = new Murid("Lala", "1");
