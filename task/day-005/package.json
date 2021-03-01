@@ -1,0 +1,23 @@
+{
+  "name": "day-005",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.js",
+  "scripts": {
+    "1": "node jawaban1.js",
+    "3": "node jawaban3.js",
+    "4": "node jawaban4.js",
+    "5": "node jawaban5.js",
+    "6": "node jawaban6.js",
+    "7": "node jawaban7.js",
+    "8": "node jawaban8.js",
+    "9": "node jawaban9.js",
+    "10": "node jawaban10.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  }
+}
