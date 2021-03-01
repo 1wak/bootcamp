@@ -16,20 +16,20 @@ function isOctal(n) {
 }
 
 function isBinary(n) {
-  return Boolean(String(n).match(/^0b[0-1]{1,}$/g));
+  return Boolean(String(n).match(/^0|0b[0-1]{1,}$/g));
 }
 
 function dataType(x) {
-  if (isInt(x) === true) {
-    console.log("Integer");
-  } else if (isFloat(x) === true) {
-    console.log("Float");
-  } else if (isOctal(x) === true) {
+  if (isOctal(x) === true) {
     console.log("Octal");
   } else if (isHex(x) === true) {
     console.log("Hexadecimal");
   } else if (isBinary(x) === true) {
     console.log("Binary");
+  } else if (isInt(x) === true) {
+    console.log("Integer");
+  } else if (isFloat(x) === true) {
+    console.log("Float");
   } else if (typeof x === "string") {
     console.log("String");
   } else if (typeof x === []) {
@@ -60,3 +60,5 @@ dataType(39);
 dataType(44.5);
 dataType({});
 dataType(["lobak", "timun", "cabai"]);
+
+// dataType(0b11); // PR
