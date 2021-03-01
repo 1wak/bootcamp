@@ -19,6 +19,4 @@ const bSort = (x) => {
 };
 
 console.log("init:", x);
-
-bSort(x);
-console.log("then: ", x);
+console.log("then: ", bSort(x));
