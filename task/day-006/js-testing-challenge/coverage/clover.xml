@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1614668697507" clover="3.2.0">
-  <project timestamp="1614668697507" name="All files">
-    <metrics statements="13" coveredstatements="13" conditionals="5" coveredconditionals="5" methods="7" coveredmethods="6" elements="25" coveredelements="24" complexity="0" loc="13" ncloc="13" packages="1" files="7" classes="7"/>
+<coverage generated="1614671144418" clover="3.2.0">
+  <project timestamp="1614671144419" name="All files">
+    <metrics statements="24" coveredstatements="24" conditionals="5" coveredconditionals="5" methods="7" coveredmethods="7" elements="36" coveredelements="36" complexity="0" loc="24" ncloc="24" packages="1" files="7" classes="7"/>
     <file name="01.js" path="/home/anutomo/Bootcamp/xapiens-batch2/task/day-006/js-testing-challenge/src/01.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="1" type="stmt"/>
@@ -34,7 +34,18 @@
       <line num="5" count="1" type="stmt"/>
     </file>
     <file name="07.js" path="/home/anutomo/Bootcamp/xapiens-batch2/task/day-006/js-testing-challenge/src/07.js">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="8" count="11" type="stmt"/>
+      <line num="9" count="22" type="stmt"/>
+      <line num="12" count="3" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
