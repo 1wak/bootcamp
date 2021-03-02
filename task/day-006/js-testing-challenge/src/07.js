@@ -1,9 +1,9 @@
 function repeatLetter(text, times) {
-  let store = text.split(" ");
+  let txt = text.split(" ");
   let res = "";
 
-  for (let i = 0; i < store.length; i++) {
-    let word = store[i];
+  for (let i = 0; i < txt.length; i++) {
+    let word = txt[i];
     for (let j = 0; j < word.length; j++) {
       for (let k = 0; k < times; k++) {
         res += word[j];
@@ -11,8 +11,7 @@ function repeatLetter(text, times) {
     }
     res += " ";
   }
-  let result = res.trim();
-  return result;
+  return res.trim();
 }
 
 module.exports = repeatLetter;
