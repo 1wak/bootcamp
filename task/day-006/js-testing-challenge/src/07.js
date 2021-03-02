@@ -1,0 +1,1 @@
+function repeatLetter(text, times) {}
