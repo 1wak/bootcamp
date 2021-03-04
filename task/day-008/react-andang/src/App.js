@@ -3,6 +3,9 @@ import s from "styled-components";
 
 const Layout = s.div`
     margin: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 const Ul = s.ul`
@@ -16,6 +19,13 @@ const Ul = s.ul`
         color: green;
         font-weight: bold;
     }
+`;
+
+const CounterWrap = s.div`
+    background: #eaeaea;
+    width: 450px;
+    height: auto;
+    text-align: center;
 `;
 
 const Info = ({ title, ...rest }) => {
@@ -60,10 +70,49 @@ const AbsenGuru = () => {
   );
 };
 
-class App extends React.Component {
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+
+    // this.handleClick = this.handleClick.bind(this);
+    // this.handleReset = this.handleReset.bind(this);
+  }
+
+  handleClick = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  handleReset = () => {
+    this.setState({ count: 0 });
+  };
+
+  render() {
+    return (
+      <div>
+        <h2>Counter App</h2>
+        <div
+          style={{
+            background: "red",
+            borderRadius: "12px",
+            // width: "calc(100% - 20%)",
+            alignContent: "center",
+          }}
+        >
+          <div>{this.state.count}</div>
+          <div>
+            <button onClick={this.handleReset}>Reset</button>
+            <button onClick={this.handleClick}>+</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+class JsComp extends React.Component {
   constructor() {
     super();
-
     this.state = {
       nama: "Vijay",
       domisili: "Jogja",
@@ -84,26 +133,41 @@ class App extends React.Component {
   render() {
     return (
       <Fragment>
+        <h1>{this.state.nama}</h1>
+        <p style={{ fontWeight: "bold" }}>{this.state.domisili}</p>
+        <button
+          style={{
+            background: "black",
+            color: "#fff",
+            border: "none",
+            borderRadius: "12px",
+            padding: "8px",
+            fontWeight: "bold",
+          }}
+          onClick={this.changeUser}
+        >
+          Change Profile
+        </button>
+      </Fragment>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <Fragment>
         <Layout>
-          <h1>{this.state.nama}</h1>
-          <p style={{ fontWeight: "bold" }}>{this.state.domisili}</p>
-          <button
-            style={{
-              background: "black",
-              color: "#fff",
-              border: "none",
-              borderRadius: "12px",
-              padding: "8px",
-              fontWeight: "bold",
-            }}
-            onClick={this.changeUser}
-          >
-            Change Profile
-          </button>
           <div>
-            <AbsenMurid />
-            <AbsenGuru />
+            <div>
+              <JsComp />
+              <AbsenMurid />
+              <AbsenGuru />
+            </div>
           </div>
+          <CounterWrap>
+            <Counter />
+          </CounterWrap>
         </Layout>
       </Fragment>
     );
