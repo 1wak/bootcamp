@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="col-md-6">
           <span className="subtitle">Professional Digital Agency</span>
           <h1 className="pr-5 xs mt-2 mb-2 font-weight-bold">
-            Promote Your Site to the Top of Search Engines
+            Ready to develop your idea?
           </h1>
           <p className="pr-3 xs">
             The best Digital Agency in town. We provide good websites and
