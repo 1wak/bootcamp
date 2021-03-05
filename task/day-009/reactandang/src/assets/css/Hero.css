@@ -1,0 +1,16 @@
+.img-bg {
+  background-image: url("../img/background/coding-freak.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.subtitle {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.spacer {
+  margin-top: 10vh;
+}
