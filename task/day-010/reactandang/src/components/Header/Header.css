@@ -1,0 +1,35 @@
+.ff {
+  font-family: "Raleway";
+  margin-right: 20px;
+  color: #fff !important;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+}
+/* 
+.nav-link:hover::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #fff;
+  width: 50%;
+  margin: auto;
+  margin-bottom: -5px;
+} */
+
+.navbar {
+  z-index: 1;
+  position: relative;
+  color: #fff !important;
+}
+
+.navbar .nav-link {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 540px) {
+  .navbar {
+    background: blue;
+  }
+}
