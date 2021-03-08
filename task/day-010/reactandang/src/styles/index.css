@@ -23,3 +23,11 @@ li {
   display: flex;
   overflow-x: auto;
 }
+
+.card__container::-webkit-scrollbar {
+  width: 0;
+}
+
+a {
+  color: inherit !important;
+}
