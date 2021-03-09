@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "../../components";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 const Register = () => {
   const history = useHistory();
+  const [value, setValue] = useState();
   return (
     <section className="form">
       <div className="auth__container">
@@ -49,11 +52,11 @@ const Register = () => {
               type="text"
               placeholder="Enter your name"
             />
-            <Input
-              id="phone"
+            <PhoneInput
               className="input"
-              type="number"
               placeholder="Enter phone number"
+              value={value}
+              onChange={setValue}
             />
             <Input
               id="addres"
