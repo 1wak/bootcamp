@@ -8,10 +8,10 @@ const Register = () => {
   const history = useHistory();
   return (
     <section className="form">
-      <div class="auth__container">
+      <div className="auth__container">
         <h1>Register</h1>
-        <div class="signup">
-          <div class="social clearfix">
+        <div className="signup">
+          <div className="social clearfix">
             <a className="social__button social__button--facebook" href="/">
               <span className="fa">
                 <FaFacebookF />
@@ -26,43 +26,55 @@ const Register = () => {
             </a>
           </div>
 
-          <div class="signup__message signup__message--center">
-            <span class="">or sign up with</span>
+          <div className="signup__message signup__message--center">
+            <span className="">or sign up with</span>
           </div>
 
-          <form class="signup__form">
+          <form className="signup__form">
             <Input
-              class="input input--small"
+              id="email"
+              className="input input--small"
               type="email"
               placeholder="Your email address"
             />
             <Input
-              class="input input--small"
+              id="pass"
+              className="input input--small"
               type="password"
               placeholder="Your password"
             />
-            <Input class="input" type="text" placeholder="Enter your name" />
             <Input
-              class="input"
+              id="name"
+              className="input"
+              type="text"
+              placeholder="Enter your name"
+            />
+            <Input
+              id="phone"
+              className="input"
               type="number"
               placeholder="Enter phone number"
             />
-            <Input class="input" type="text" placeholder="Enter home address" />
-            <div class="signup__message">
-              <span class="">
-                By creating an account, you agree to our{" "}
-                <a class="signup__link" href="/">
+            <Input
+              id="addres"
+              className="input"
+              type="text"
+              placeholder="Enter home address"
+            />
+            <div className="signup__message">
+              <span className="">
+                By creating an account, you agree to our
+                <Link className="signup__link" to="/">
                   terms & conditions.
-                </a>
+                </Link>
               </span>
             </div>
             <button
-              class="button button--submit"
+              className="button button--submit"
               onSubmit={() => history.push("/")}
             >
               Create Account
             </button>
-            {/* <Submit title="Create Account" onSubmit={() => history.push("/")} /> */}
           </form>
         </div>
         <div className="switch__page">

@@ -1,26 +1,31 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Input, Submit } from "../../components";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 
-export default class Login extends React.Component {
-  state = {
-    user: "",
-    rememberMe: false,
+export default class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+    };
+  }
+
+  handleEmail = (e) => {
+    this.setState({ email: e.target.value });
+  };
+  handlePassword = (e) => {
+    this.setState({ password: e.target.value });
   };
 
-  handleChange = (event) => {
-    const input = event.target;
-    const value = input.type === "checkbox" ? input.checked : input.value;
-
-    this.setState({ [input.name]: value });
+  handleSubmit = (e) => {
+    const { email, password } = this.state;
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+    e.preventDefault();
   };
 
-  handleFormSubmit = () => {
-    const { user, rememberMe } = this.state;
-    localStorage.setItem("rememberMe", rememberMe);
-    localStorage.setItem("user", rememberMe ? user : "");
-  };
   render() {
     return (
       <section className="form">
@@ -46,18 +51,24 @@ export default class Login extends React.Component {
               <span className="">or login with</span>
             </div>
 
-            <form className="login__form">
+            <form className="login__form" onSubmit={this.handleSubmit}>
               <Input
+                name="email"
                 className="input"
                 type="email"
                 placeholder="Your email address"
                 required
+                value={this.state.email}
+                onChange={this.handleEmail}
               />
               <Input
+                name="password"
                 className="input"
                 type="password"
                 placeholder="Your password"
                 required
+                value={this.state.password}
+                onChange={this.handlePassword}
               />
               <div className="login__div">
                 <Submit title="Login" />
