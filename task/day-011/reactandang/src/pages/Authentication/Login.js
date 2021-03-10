@@ -4,26 +4,23 @@ import { Input, Submit } from "../../components";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 
 export default class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: "",
-      password: "",
-    };
-  }
-
-  handleEmail = (e) => {
-    this.setState({ email: e.target.value });
-  };
-  handlePassword = (e) => {
-    this.setState({ password: e.target.value });
+  state = {
+    email: "",
+    password: "",
   };
 
-  handleSubmit = (e) => {
+  handleEmail = (event) => {
+    this.setState({ email: event.target.value });
+  };
+  handlePassword = (event) => {
+    this.setState({ password: event.target.value });
+  };
+
+  handleSubmit = (event) => {
     const { email, password } = this.state;
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
-    e.preventDefault();
+    event.preventDefault();
   };
 
   render() {
