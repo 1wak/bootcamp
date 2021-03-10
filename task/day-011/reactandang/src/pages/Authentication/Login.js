@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Input, Submit } from "../../components";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 
-export default class Login extends Component {
+export default class Login extends React.Component {
   state = {
     email: "",
     password: "",
