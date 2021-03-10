@@ -35,7 +35,8 @@
   padding: 10px;
 }
 .signup__message,
-.login__div {
+.login__div,
+.error__message {
   color: #000;
   font-size: 13px;
   padding: 12px 0;

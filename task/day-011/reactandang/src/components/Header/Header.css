@@ -22,6 +22,7 @@
   z-index: 1;
   position: relative;
   color: #fff !important;
+  height: 60px;
 }
 
 .navbar .nav-link {

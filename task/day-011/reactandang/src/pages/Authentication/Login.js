@@ -1,27 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Input, Submit } from "../../components";
+// import { Input, Submit } from "../../components";
+import { Field, Formik, Form } from "formik";
+import * as Yup from "yup";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 
 export default class Login extends React.Component {
-  state = {
-    email: "",
-    password: "",
-  };
+  emailInput = "Kolom tidak boleh kosong";
+  passwordInput = "Kolom tidak boleh kosong";
+  passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-  handleEmail = (event) => {
-    this.setState({ email: event.target.value });
-  };
-  handlePassword = (event) => {
-    this.setState({ password: event.target.value });
-  };
-
-  handleSubmit = (event) => {
-    const { email, password } = this.state;
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
-    event.preventDefault();
-  };
+  errorValidation = () =>
+    Yup.object().shape({
+      email: Yup.string().email(this.emailInput).required(),
+      password: Yup.string()
+        .matches(this.passwordRegex, { message: "Minimal 10" })
+        .required(this.passwordInput),
+    });
 
   render() {
     return (
@@ -48,29 +43,47 @@ export default class Login extends React.Component {
               <span className="">or login with</span>
             </div>
 
-            <form className="login__form" onSubmit={this.handleSubmit}>
-              <Input
-                name="email"
-                className="input"
-                type="email"
-                placeholder="Your email address"
-                required
-                value={this.state.email}
-                onChange={this.handleEmail}
-              />
-              <Input
-                name="password"
-                className="input"
-                type="password"
-                placeholder="Your password"
-                required
-                value={this.state.password}
-                onChange={this.handlePassword}
-              />
-              <div className="login__div">
-                <Submit title="Login" />
-              </div>
-            </form>
+            <Formik
+              initialValues={{
+                email: "",
+                password: "",
+              }}
+              validationSchema={this.errorValidation}
+              onSubmit={async ({ email, password }) => {
+                await localStorage.setItem("email", email);
+                await localStorage.setItem("password", password);
+              }}
+            >
+              {({ errors, touched }) => (
+                <Form>
+                  <Field
+                    name="email"
+                    className="input"
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                  />
+                  {errors.email && touched.email && <div>{errors.email}</div>}
+
+                  <Field
+                    name="password"
+                    className="input"
+                    type="password"
+                    placeholder="Your password"
+                    required
+                  />
+                  {errors.password && touched.password && (
+                    <div>{errors.password}</div>
+                  )}
+
+                  <div className="login__div">
+                    <button type="submit" title="Login">
+                      Submit Bro
+                    </button>
+                  </div>
+                </Form>
+              )}
+            </Formik>
           </div>
           <div className="switch__page">
             <span>

@@ -66,7 +66,7 @@ const Register = () => {
             />
             <div className="signup__message">
               <span className="">
-                By creating an account, you agree to our
+                By creating an account, you agree to our{" "}
                 <Link className="signup__link" to="/">
                   terms & conditions.
                 </Link>
