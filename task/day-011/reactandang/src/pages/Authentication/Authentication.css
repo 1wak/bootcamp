@@ -16,6 +16,9 @@
   .auth__container {
     margin: 4.5rem auto;
   }
+  .login {
+    min-width: 37.5rem;
+  }
 }
 
 .auth__container h1 {
@@ -26,7 +29,6 @@
 .switch__page {
   text-align: center;
 }
-
 .signup,
 .login {
   max-width: 37.5rem;
@@ -35,12 +37,18 @@
   padding: 10px;
 }
 .signup__message,
-.login__div,
-.error__message {
+.login__div {
   color: #000;
   font-size: 13px;
   padding: 12px 0;
 }
+
+.error__message {
+  color: red;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
 .signup__message--center,
 .login__div--center {
   text-align: center;
