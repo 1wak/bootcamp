@@ -1,0 +1,31 @@
+.card {
+  background-image: url(../../assets/cta_img.svg);
+  background-size: cover;
+  position: relative;
+}
+
+.card .container {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+
+.card .container .lead {
+  font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+  .card .container {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+  .card .container .display-4 {
+    font-size: 52px !important;
+  }
+  .card .container .lead {
+    font-size: 18px;
+  }
+}
