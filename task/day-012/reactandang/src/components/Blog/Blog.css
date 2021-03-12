@@ -1,0 +1,9 @@
+.blog__ctn div {
+  color: #fff !important;
+}
+
+.blog__ctn {
+  border-radius: 16px;
+  padding: 10px;
+  background: black;
+}
