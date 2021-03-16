@@ -1,46 +1,72 @@
 import React from "react";
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import s from "styled-components";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import { Link, useHistory } from "react-router-dom";
 
-const NavbarContainer = s(Navbar)`
-  border-bottom: 1px solid rgba(0,0,0,.45);
-`;
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  title: {
+    flexGrow: 1,
+    display: "none",
+    textTransform: "uppercase",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
+  headerMenu: {
+    display: "flex",
+    textTransform: "uppercase",
+  },
+  headerMenuItem: {
+    margin: theme.spacing(0, 1),
+  },
+  menuButton: {
+    marginLeft: 10,
+  },
+}));
 
 const Header = () => {
+  const classes = useStyles();
+  const history = useHistory();
   return (
-    <NavbarContainer
-      collapseOnSelect
-      sticky="top"
-      expand="lg"
-      bg="light"
-      variant="light"
-    >
-      <Navbar.Brand>
-        <Link to="/">Lakerja</Link>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#features">Internship</Nav.Link>
-          <Nav.Link href="#pricing">Interview Tips</Nav.Link>
-          <NavDropdown title="Job List" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">
-              Digital Marketing
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Software Engineer
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Influencer</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-        <Nav>
-          <Nav.Link>
-            <Link to="/login">Get Started</Link>
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </NavbarContainer>
+    <div className={classes.root}>
+      <AppBar position="fixed" color="default">
+        <Toolbar>
+          <Typography
+            className={classes.title}
+            variant="h6"
+            component="h2"
+            noWrap
+          >
+            <Link to="/">Lakerja</Link>
+          </Typography>
+          <div className={classes.headerMenu}>
+            <Typography className={classes.headerMenuItem}>
+              <Link to="/intern">Virtual Internship</Link>
+            </Typography>
+            <Typography className={classes.headerMenuItem}>
+              <Link to="/jobs">Find A Job</Link>
+            </Typography>
+            <Typography className={classes.headerMenuItem}>
+              <Link to="/blog">Interview Tips</Link>
+            </Typography>
+          </div>
+          <Button
+            className={classes.menuButton}
+            variant="outlined"
+            color="primary"
+            onClick={() => history.push("/login")}
+          >
+            Login
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 };
 

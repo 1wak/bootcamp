@@ -96,17 +96,17 @@ function Footer() {
           <span>&copy; 2021 Lakerja.com | All Right Reserved</span>
         </div>
         <div className="d-flex">
-          <div class="btn-group dropup">
+          <div className="btn-group dropup">
             <button
               type="button"
-              class="btn btn-secondary dropdown-toggle"
+              className="btn btn-secondary dropdown-toggle"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
             >
               Language
             </button>
-            <div class="dropdown-menu">
+            <div className="dropdown-menu">
               <p>
                 <a href="/">English</a>
               </p>

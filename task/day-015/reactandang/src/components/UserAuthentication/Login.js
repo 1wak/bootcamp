@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Input } from "../../components";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { useForm, validate } from "../../utils";
-import { Submit } from "../atoms";
 
 const Login = ({ submitForm }) => {
   const { handleSubmit, handleChange, errors, values } = useForm(
     submitForm,
     validate
   );
+  console.log(submitForm);
+
   return (
     <section className="form">
       <div className="auth__container">
@@ -33,7 +35,7 @@ const Login = ({ submitForm }) => {
             <span className="">or login with</span>
           </div>
           <form onSubmit={handleSubmit}>
-            <input
+            <Input
               name="email"
               className="input"
               type="text"
@@ -45,7 +47,7 @@ const Login = ({ submitForm }) => {
               <div className="error__message">{errors.email}</div>
             ) : null}
 
-            <input
+            <Input
               name="password"
               className="input"
               type="password"
@@ -58,7 +60,7 @@ const Login = ({ submitForm }) => {
             ) : null}
 
             <div className="login__div">
-              <Submit title="Login" />
+              <button className="button button--submit">Create Account</button>
             </div>
           </form>
         </div>

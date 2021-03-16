@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
+import { Input } from "../atoms";
 import { useForm, validate } from "../../utils";
 
 const Register = ({ submitForm }) => {
@@ -8,6 +9,7 @@ const Register = ({ submitForm }) => {
     submitForm,
     validate
   );
+  console.log(submitForm);
   return (
     <section className="form">
       <div className="auth__container">
@@ -32,7 +34,7 @@ const Register = ({ submitForm }) => {
             <span className="">or sign up with</span>
           </div>
           <form className="signup__form" onSubmit={handleSubmit}>
-            <input
+            <Input
               id="email"
               name="email"
               className="input"
@@ -44,7 +46,7 @@ const Register = ({ submitForm }) => {
             {errors.email ? (
               <div className="error__message">{errors.email}</div>
             ) : null}
-            <input
+            <Input
               id="password"
               name="password"
               className="input"
@@ -56,7 +58,7 @@ const Register = ({ submitForm }) => {
             {errors.password ? (
               <div className="error__message">{errors.password}</div>
             ) : null}
-            <input
+            <Input
               id="password2"
               name="password2"
               className="input"
@@ -68,7 +70,7 @@ const Register = ({ submitForm }) => {
             {errors.password2 ? (
               <div className="error__message">{errors.password2}</div>
             ) : null}
-            <input
+            <Input
               id="name"
               name="name"
               className="input"
@@ -80,7 +82,7 @@ const Register = ({ submitForm }) => {
             {errors.name ? (
               <div className="error__message">{errors.name}</div>
             ) : null}
-            <input
+            <Input
               id="phone"
               name="phone"
               className="input"
@@ -92,7 +94,7 @@ const Register = ({ submitForm }) => {
             {errors.phone ? (
               <div className="error__message">{errors.phone}</div>
             ) : null}
-            <input
+            <Input
               id="address"
               name="address"
               className="input"

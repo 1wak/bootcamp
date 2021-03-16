@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import "../../../styles/Success.css";
+import "./Success.css";
 const Success = () => {
   return (
     <Fragment>

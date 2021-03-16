@@ -10,7 +10,7 @@ const FormSuccess = () => {
   return (
     <section className="form">
       <Success />
-      <h1 className="text-center">Register Success</h1>
+      <h1 className="text-center">Success</h1>
     </section>
   );
 };

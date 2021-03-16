@@ -1,25 +1,38 @@
-import React, { Component, Fragment } from "react";
-import { Switch, Route } from "react-router-dom";
-import { FourOhFour, Homepage, Login, Register } from "./pages";
+import { Fragment } from "react";
+import { Route, Switch } from "react-router";
 import { Footer, Header, Layout } from "./components";
+import { FourOhFour, Home, Login, Register, BlogPage, JobPage } from "./pages";
+import { makeStyles } from "@material-ui/core/styles";
+import InternPage from "./pages/Intern";
 
-class App extends Component {
-  render() {
-    return (
-      <Fragment>
+const useStyles = makeStyles({
+  container: {
+    marginTop: 85,
+    marginBottom: 80,
+  },
+});
+
+const App = () => {
+  const classes = useStyles();
+  return (
+    <Fragment>
+      <Layout>
         <Header />
         <Switch>
-          <Layout>
-            <Route exact path="/" component={Homepage} />
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-            <Route path="*" component={FourOhFour} />
-          </Layout>
+          <div className={classes.container}>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/blog" component={BlogPage} />
+            <Route exact path="/jobs" component={JobPage} />
+            <Route exact path="/intern" component={InternPage} />
+          </div>
+          <Route path="*" component={FourOhFour} />
         </Switch>
         <Footer />
-      </Fragment>
-    );
-  }
-}
+      </Layout>
+    </Fragment>
+  );
+};
 
 export default App;
