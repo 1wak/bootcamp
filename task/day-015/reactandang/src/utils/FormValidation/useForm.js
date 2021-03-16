@@ -22,12 +22,17 @@ const useForm = (callback, validate) => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(values);
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      console.log("Ini hasil stringify: ", JSON.stringify(values));
+      setErrors(validate(values));
+      setIsSubmitting(true);
 
-    setErrors(validate(values));
-    setIsSubmitting(true);
+      if (isSubmitting === true) localStorage.setItem("values", values);
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   useEffect(() => {
