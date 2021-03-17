@@ -1,15 +1,39 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import { Input } from "../../components";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
-import { useForm, validate } from "../../utils";
+import { validate } from "../../utils";
 
 const Login = ({ submitForm }) => {
-  const { handleSubmit, handleChange, errors, values } = useForm(
-    submitForm,
-    validate
-  );
-  console.log(submitForm);
+  // const { handleSubmit, handleChange, errors, values } = useForm(
+  //   submitForm,
+  //   validate
+  // );
+  const history = useHistory();
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleSubmit = (e) => {
+    setErrors(validate(values));
+    if (Object.keys(errors).length === 0) {
+      e.preventDefault();
+      console.log(values);
+    } else {
+      history.push("/");
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
 
   return (
     <section className="form">

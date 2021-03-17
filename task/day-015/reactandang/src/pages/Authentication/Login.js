@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import { FormLogin, FormSuccess } from "../../components";
+import React from "react";
+import { FormLogin } from "../../components";
 
 const Login = () => {
-  const [isSubmitted, setSubmitted] = useState(false);
-  const submitForm = () => setSubmitted(true);
+  // const [isSubmitted, setSubmitted] = useState(false);
+  // const submitForm = () => setSubmitted(true);
   return (
     <React.Fragment>
-      {!isSubmitted ? <FormLogin submitForm={submitForm} /> : <FormSuccess />}
+      <FormLogin />
+      {/* {!isSubmitted ? <FormLogin submitForm={submitForm} /> : <FormSuccess />} */}
     </React.Fragment>
   );
 };
