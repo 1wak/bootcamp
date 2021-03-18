@@ -1,3 +1,4 @@
+import { Grid } from "@material-ui/core";
 import React, { useState, useContext, useEffect } from "react";
 import { TodoContext } from "./TodoContext";
 
@@ -36,16 +37,11 @@ const TodoForm = () => {
         value={title}
         onChange={handleChange}
         required
-        className="todo-input"
       />
-      <div className="buttons">
-        <button type="submit" className="btn add-todo-btn">
-          {editItem ? "Edit Todo" : "Add Todo"}
-        </button>
-        <button className="btn clear-btn" onClick={clearList}>
-          Clear
-        </button>
-      </div>
+      <Grid container>
+        <button type="submit">{editItem ? "Edit Todo" : "Add Todo"}</button>
+        <button onClick={clearList}>Clear</button>
+      </Grid>
     </form>
   );
 };

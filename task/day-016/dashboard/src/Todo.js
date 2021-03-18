@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, IconButton, Tooltip, Typography } from "@material-ui/core";
 import React, { useContext } from "react";
 import { TodoContext } from "./TodoContext";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -27,13 +27,21 @@ const Todo = ({ todo }) => {
         </Grid>
         <Grid item md={3}>
           <button onClick={() => removeTodo(todo.id)}>
-            <DeleteIcon />
+            <Tooltip title="Delete">
+              <IconButton>
+                <DeleteIcon />
+              </IconButton>
+            </Tooltip>
           </button>
         </Grid>
 
         <Grid item md={3}>
           <button onClick={() => findItem(todo.id)}>
-            <EditIcon />
+            <Tooltip title="Edit">
+              <IconButton>
+                <EditIcon />
+              </IconButton>
+            </Tooltip>
           </button>
         </Grid>
       </Grid>
