@@ -1,0 +1,19 @@
+.button {
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+.button--submit {
+  padding: 9px;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+}
+.button--submit:hover {
+  background: #0069d9;
+}
+.button--submit:active {
+  background: #6610f2;
+}

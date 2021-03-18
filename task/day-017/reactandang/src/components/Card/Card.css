@@ -1,0 +1,35 @@
+.card__main {
+  margin-right: 0.6rem;
+  min-width: 18em;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card__img {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 16px;
+  max-height: 12em;
+}
+
+.card__title {
+  margin-top: 10px;
+  font-size: medium !important;
+  color: #000;
+}
+
+.black__bg {
+  margin-top: 10px;
+
+  font-size: medium !important;
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  .card__main {
+    min-width: 24em;
+  }
+  .card__img {
+    max-height: 15em;
+  }
+}
