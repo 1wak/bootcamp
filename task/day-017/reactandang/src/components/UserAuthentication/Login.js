@@ -53,7 +53,8 @@ const Login = () => {
                   localStorage.setItem("jwtToken", res.data.token);
                   localStorage.setItem("user", JSON.stringify(res.data.user));
 
-                  history.push("/home");
+                  history.push("/");
+                  window.location.reload();
                 })
                 .catch((err) => alert(err))
             }
