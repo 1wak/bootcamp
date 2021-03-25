@@ -24,7 +24,7 @@ const ListData = () => {
     ({ uuid, name, addresss, phoneNumber, hobbies, occupation }) => (
       <div key={uuid}>
         <ul>
-          <li>Nama: {name}</li>
+          <li>Nama ajwe: {name}</li>
           <li>Alamat: {addresss}</li>
           <li>No HP: {phoneNumber}</li>
           <li>Hobi: {hobbies}</li>

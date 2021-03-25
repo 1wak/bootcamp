@@ -4,6 +4,7 @@ export default function validateInfo(values) {
   if (!values.email) {
     errors.email = "Email required";
   } else if (
+    // eslint-disable-next-line
     !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
       values.email
     )

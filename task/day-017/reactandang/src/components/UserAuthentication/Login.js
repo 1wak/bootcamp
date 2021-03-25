@@ -14,7 +14,7 @@ const formValidationSchema = Yup.object({
     .required("Email address is required"),
   password: Yup.string("")
     .min(8, "Password atleast 8 characters")
-    .required("Enter your f* password, canda password"),
+    .required("Enter your * password, canda password"),
 });
 
 const Login = () => {

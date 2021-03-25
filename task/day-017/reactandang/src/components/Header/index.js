@@ -62,7 +62,10 @@ const Header = () => {
               className={classes.menuButton}
               variant="outlined"
               color="primary"
-              onClick={() => localStorage.clear()}
+              onClick={() => {
+                localStorage.clear();
+                window.location.reload("/");
+              }}
             >
               Logout
             </Button>

@@ -34,8 +34,8 @@ const Header = () => {
   const classes = useStyles();
   const history = useHistory();
   return (
-    <div className={classes.root}>
-      <AppBar position="fixed" color="default">
+    <AppBar position="fixed" color="default">
+      <div className={classes.root}>
         <Toolbar>
           <Typography
             className={classes.title}
@@ -65,8 +65,8 @@ const Header = () => {
             Login
           </Button>
         </Toolbar>
-      </AppBar>
-    </div>
+      </div>
+    </AppBar>
   );
 };
 

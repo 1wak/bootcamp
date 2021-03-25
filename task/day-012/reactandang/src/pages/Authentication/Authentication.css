@@ -16,7 +16,8 @@
   .auth__container {
     margin: 4.5rem auto;
   }
-  .login {
+  .login,
+  .signup {
     min-width: 37.5rem;
   }
 }
