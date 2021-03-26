@@ -1,8 +1,17 @@
+import styled from "styled-components";
+import AllData from "./AllData";
+
+const MainBackground = styled.main`
+  background-color: #efefef;
+  height: 100vh;
+`;
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hellow Semuanya</h1>
-    </div>
+    <MainBackground>
+      <h1>Hellow</h1>
+      <AllData />
+    </MainBackground>
   );
 }
 
